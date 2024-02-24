@@ -12,7 +12,7 @@ class Solution(object):
             if openN < n:
                 stack.append("(")
                 backtrack(openN + 1, closeN)
-                stack.pop()
+                stack.pop() # since stack is the global variable onvce backtracked it needs to be clean it up!
             if closeN < openN:
                 stack.append(")")
                 backtrack(openN ,  closeN + 1)
