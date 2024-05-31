@@ -8,3 +8,4 @@ where e.salary < 30000 )
 
 select employee_id 
 from cte where manager_id not in (select distinct employee_id from employees)
+order by employee_id
